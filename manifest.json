@@ -1,0 +1,19 @@
+{
+  "name": "Deadline To",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Show deadline to",
+  "browser_action": {
+    "default_icon": "ikon.jpg",
+	"default_popup": "popup.html"
+  },
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [{
+        "js": [
+               "jquery.min.js",
+               "deadline.js"
+              ],
+        "matches": [ "http://*/*" ],
+        "run_at": "document_end"
+    }]
+}

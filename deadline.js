@@ -61,7 +61,7 @@ var addItemToLocalStorage = function(deadline_obj) {
     var date = deadline_obj.deadline;
 
     var current_count = parseInt(localStorage.getItem("current_count"));
-	if(!current_count) {current_count=0; alert ("zero count!");}
+	if(!current_count) {current_count=0;}
 	var deadline = {"title":name, "deadline":date};
 	var idfy = "deadline-" + current_count;
 	localStorage.setItem(idfy, JSON.stringify(deadline));
